@@ -1,0 +1,215 @@
+*{     
+    margin: 0;     
+    padding: 0; 
+}  
+
+:root{     
+    --background: #000430;     
+    --secondarybackground: #171c48;     
+    --text: #fff;     
+    --purple: #828dff;     
+    --teal: #24feee; 
+}  
+
+body{     
+    background-color: var(--background);     
+    color: var(--text); 
+} 
+
+.container{     
+    display: flex;     
+    flex-direction: column;     
+    justify-content: center;     
+    align-items: center;     
+    margin-top: 120px;
+    padding: 0 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+.stats-container{     
+    border: 2px solid var(--purple);     
+    padding: 30px;     
+    border-radius: 10px;     
+    display: flex;     
+    justify-content: space-between;     
+    gap: 20px;     
+    width: 100%; 
+}  
+
+.details{     
+    width: 100%; 
+}  
+
+#progressBar{     
+    width: 100%;     
+    height: 10px;     
+    border-radius: 5px;     
+    background-color: var(--secondarybackground);     
+    margin-top: 25px; 
+}    
+
+#progress{
+    height: 100%;
+    background-color: var(--purple);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+#score{     
+    display: flex;     
+    justify-content: center;     
+    align-items: center;     
+    background-color: var(--purple);     
+    height: 100px;     
+    width: 100px;     
+    border-radius: 50%;     
+    font-size: 30px;     
+    font-weight: bold; 
+} 
+
+form{     
+    margin-top: 60px;     
+    width: 100%;     
+    display: flex;     
+    gap: 10px; 
+} 
+
+input{     
+    flex: 1;     
+    padding: 16px;     
+    background-color: var(--secondarybackground);     
+    border: 1px solid var(--purple);     
+    border-radius: 10px;     
+    color: var(--text);     
+    outline: none; 
+}  
+
+button{     
+    width: 50px;     
+    height: 50px;     
+    border-radius: 50%;     
+    display: flex;     
+    align-items: center;     
+    justify-content: center;     
+    background-color: var(--purple);     
+    font-size: 20px;     
+    font-weight: bold;     
+    color: var(--text);     
+    outline: none;
+    border: none;
+    cursor: pointer;
+}  
+
+#task-list{     
+    display: flex;     
+    flex-direction: column;     
+    gap: 10px;     
+    margin-top: 30px;     
+    width: 100%;     
+    list-style: none; 
+}  
+
+.listItem{     
+    display: flex;     
+    background-color: var(--secondarybackground);     
+    justify-content: space-between;     
+    padding: 10px;     
+    border-radius: 10px;     
+    align-items: center; 
+} 
+
+.listItem img{     
+    width: 24px;     
+    height: 24px;     
+    margin: 0 10px;     
+    cursor: pointer; 
+}  
+
+.task{     
+    display: flex;     
+    align-items: center;     
+    gap: 10px; 
+}  
+
+.task input{     
+    width: 20px;     
+    height: 20px; 
+}
+
+.task.completed p{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 60px;
+        padding: 0 15px;
+        max-width: 600px;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    #score {
+        height: 80px;
+        width: 80px;
+        font-size: 24px;
+        align-self: center;
+    }
+    
+    form {
+        margin-top: 40px;
+    }
+    
+    input {
+        padding: 12px;
+    }
+    
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .listItem {
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .listItem img {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 40px 15px 0 15px;
+        padding: 0 20px;
+        max-width: 400px;
+    }
+    
+    .stats-container {
+        padding: 15px;
+    }
+    
+    .listItem {
+        padding: 6px;
+    }
+    
+    .task {
+        gap: 8px;
+    }
+    
+    .task input {
+        width: 18px;
+        height: 18px;
+    }
+}
