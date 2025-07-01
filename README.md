@@ -37,10 +37,3 @@ A modern, responsive todo application that helps users manage their daily tasks 
 1. Clone the repository
 2. Open `index.html` in your browser
 3. Start managing your tasks!
-
-## Future Enhancements
-
-- Task categories and priorities
-- Due dates and reminders
-- Export/import functionality
-- Multiple theme options
